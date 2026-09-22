@@ -48,3 +48,8 @@ client.on("interactionCreate", async interaction => {
     });
   }
 });
+const http = require("http");
+
+http.createServer((req, res) => {
+  res.end("Bot is online!");
+}).listen(process.env.PORT || 10000, "0.0.0.0");
